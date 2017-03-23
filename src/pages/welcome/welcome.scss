@@ -1,0 +1,22 @@
+
+page-welcome {
+  overflow: hidden;
+    ion-slide {
+      background-color: #eeeeee;
+      img {
+          height: auto !important;
+          width: 100% !important;
+      }
+
+   }
+   .join{
+     position: fixed;
+     z-index: 1000;
+     bottom: 20%;
+     left: 0;
+     right: 0;
+     width: 8rem;
+     margin-left: auto;
+     margin-right: auto;
+ }
+}

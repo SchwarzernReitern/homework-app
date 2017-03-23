@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {NavController, AlertController, Modal, ModalController} from 'ionic-angular';
+import {NavController, AlertController, ModalController} from 'ionic-angular';
 import {SearchPage} from "../search/search";
 
 @Component({

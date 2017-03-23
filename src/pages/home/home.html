@@ -1,29 +1,37 @@
-<ion-header no-border>
-  <ion-navbar color="secondary">
-    <ion-title>
-      Page Title
-    </ion-title>
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Page Title
+        </ion-title>
 
-    <ion-buttons end>
-      <button ion-button icon-only (click)="gotoSearch()">
-        <ion-icon name="ios-search"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="gotoSearch()">
+                <ion-icon name="ios-search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 
 </ion-header>
 
-<ion-content>
-
-  <ion-slides style="height: 150px" pager>
-    <ion-slide style="background-color: green;">
-      <h2>Slide 1</h2>
-    </ion-slide>
-    <ion-slide style="background-color: blue;">
-      <h2>Slide 2</h2>
-    </ion-slide>
-    <ion-slide style="background-color: red;">
-      <h2>Slide 3</h2>
-    </ion-slide>
-  </ion-slides>
-</ion-content>
+  <ion-content class="card-background-page">
+    <ion-card>
+      <img src="/assets/demo/card-saopaolo.png"/>
+      <div class="card-title">São Paulo</div>
+      <div class="card-subtitle">41 Listings</div>
+    </ion-card>
+    <ion-card>
+      <img src="/assets/demo/card-amsterdam.png"/>
+      <div class="card-title">Amsterdam</div>
+      <div class="card-subtitle">64 Listings</div>
+    </ion-card>
+    <ion-card>
+      <img src="/assets/demo/card-sf.png"/>
+      <div class="card-title">San Francisco</div>
+      <div class="card-subtitle">72 Listings</div>
+    </ion-card>
+    <ion-card>
+      <img src="/assets/demo/card-madison.png"/>
+      <div class="card-title">Madison</div>
+      <div class="card-subtitle">28 Listings</div>
+    </ion-card>
+  </ion-content>
