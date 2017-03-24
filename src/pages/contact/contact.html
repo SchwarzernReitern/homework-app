@@ -8,7 +8,7 @@
 <ion-content>
     <ion-list>
         <ion-item-divider>A</ion-item-divider>
-        <ion-item-sliding>
+        <ion-item-sliding *ngFor="let contact of contacts">
             <ion-item (click)="toChat('JASON')">
                 <ion-avatar item-left>
                     <img src="/assets/demo/image/head_ico1.png">
@@ -33,126 +33,5 @@
                 </button>
             </ion-item-options>
         </ion-item-sliding>
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="/assets/demo/image/head_ico2.png">
-                </ion-avatar>
-                <h2>Slimer</h2>
-            </ion-item>
-            <ion-item-options side="left">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="mail"></ion-icon>
-                    Email
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="/assets/demo/image/head_ico3.png">
-                </ion-avatar>
-                <h2>Slimer</h2>
-            </ion-item>
-            <ion-item-options side="left">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="mail"></ion-icon>
-                    Email
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="/assets/demo/image/head_ico4.png">
-                </ion-avatar>
-                <h2>Slimer</h2>
-            </ion-item>
-            <ion-item-options side="left">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="mail"></ion-icon>
-                    Email
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="/assets/demo/image/head_ico5.png">
-                </ion-avatar>
-                <h2>Slimer</h2>
-            </ion-item>
-            <ion-item-options side="left">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="mail"></ion-icon>
-                    Email
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="/assets/demo/image/head_ico4.png">
-                </ion-avatar>
-                <h2>Slimer</h2>
-            </ion-item>
-            <ion-item-options side="left">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="mail"></ion-icon>
-                    Email
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-        <ion-item-divider>A</ion-item-divider>
     </ion-list>
 </ion-content>

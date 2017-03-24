@@ -3,10 +3,15 @@
         <ion-title>
             我
         </ion-title>
+        <ion-buttons end>
+            <button ion-button>
+                <ion-icon name="settings"></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 <ion-content>
-    <ion-list>
+    <ion-list no-lines>
         <ion-item-divider></ion-item-divider>
         <button ion-item (click)="presentModal()">
             <ion-avatar item-left>

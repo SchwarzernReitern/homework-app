@@ -1,10 +1,10 @@
 /**
  * Created by Tristan on 17/3/19.
  */
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 
-import {NavController, ModalController, App} from 'ionic-angular';
-import {LoginModal} from "../login/login";
+import {App, ModalController, NavController} from "ionic-angular";
+import {LoginnavPage} from "../loginnav/loginnav";
 
 @Component({
     selector: 'page-profile',
@@ -13,8 +13,7 @@ import {LoginModal} from "../login/login";
 export class ProfilePage {
     constructor(public navCtrl: NavController, public modalCtrl: ModalController, public  appCtrl: App) {
     }
-
     presentModal() {
-        this.appCtrl.getRootNav().push(LoginModal);
+        this.modalCtrl.create(LoginnavPage).present();
     }
 }

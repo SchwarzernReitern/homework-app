@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import {Component} from '@angular/core';
+import {Platform} from 'ionic-angular';
+import {Storage} from '@ionic/storage';
+import {StatusBar, Splashscreen} from 'ionic-native';
 
-import { TabsPage } from '../pages/tabs/tabs';
-import { WelcomePage } from "../pages/welcome/welcome";
+import {TabsPage} from '../pages/tabs/tabs';
+import {WelcomePage} from "../pages/welcome/welcome";
 
 
 @Component({
@@ -12,8 +12,9 @@ import { WelcomePage } from "../pages/welcome/welcome";
 })
 export class MyApp {
     rootPage;
+
     constructor(platform: Platform, public storage: Storage) {
-        storage.get('firstInss').then((result) => {
+        storage.get('firstIn').then((result) => {
             if (result) {
                 this.rootPage = TabsPage;
             }
@@ -28,5 +29,9 @@ export class MyApp {
             StatusBar.styleDefault();
             Splashscreen.hide();
         });
+
+
     }
+
+
 }
