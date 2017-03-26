@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {ViewController} from ".2.2.0@ionic-angular/navigation/view-controller";
+import {ViewController} from "ionic-angular";
 
 /*
  Generated class for the Register page.

@@ -1,5 +1,38 @@
 page-login {
+
   .toolbar-background {
     background-color: rgba(0, 0, 0, 0);
   }
+  .login-container {
+    .background {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .login-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    ion-item {
+      background-color: rgba(0, 0, 0, 0);
+      button:hover {
+        opacity: 1;
+      }
+    }
+    .fd-rg {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.white-shadow {
+  color: #fff;
+  text-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
 }

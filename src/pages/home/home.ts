@@ -1,49 +1,29 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 
-import {NavController, AlertController, ModalController} from 'ionic-angular';
+import {App, ModalController, NavController} from "ionic-angular";
 import {SearchPage} from "../search/search";
+import {UserprofileProvider} from "../../providers/userprofile";
+import {TestpaperPage} from "../testpaper/testpaper";
 
 @Component({
     selector: 'page-home',
-    templateUrl: 'home.html'
+    templateUrl: 'home.html',
+    providers: [UserprofileProvider]
 })
 export class HomePage {
-    constructor(public navCtrl: NavController, public alertCtrl: AlertController, public modalCtrl: ModalController) {
+    grade: string = '六年级';
+    gradeSelectTitle: any = {
+        title: '选择年级'
     }
 
-
-    async ionViewLoaded() {
-        console.log('ionViewLoaded')
+    constructor(public navCtrl: NavController, public appCtrl: App, public userProfileProvider: UserprofileProvider, public modalCtrl: ModalController) {
+    }
+    gotoSearch() {
+        this.appCtrl.getRootNav().push(SearchPage);
     }
 
-    async ionViewWillEnter() {
-        let res = await this.tolist();
-        console.log(res)
-        console.log('ionViewLoaded')
-        console.log('ionViewWillEnter')
-    }
-
-    showAlert() {
-        let alert = this.alertCtrl.create({
-            title: 'New Friend!',
-            subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-            buttons: ['OK']
-        });
-        alert.present();
-    }
-
-    async gotoSearch() {
-        let modal = this.modalCtrl.create(SearchPage);
-        modal.present();
-
-    }
-
-    tolist(): Promise<string> {
-        return new Promise((resove, reject) => {
-            setTimeout(() => {
-                resove("sss");
-            }, 1000)
-        })
+    toTestPaperPage() {
+        this.appCtrl.getRootNav().push(TestpaperPage);
     }
 
 }

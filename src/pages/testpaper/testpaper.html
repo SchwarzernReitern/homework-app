@@ -1,0 +1,114 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-title>
+            选择题<br><span style="font-size: 1rem">(8/10)</span>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <ion-slides>
+        <ion-slide padding>
+
+        </ion-slide>
+        <ion-slide padding>
+            <p class="content" [innerHtml]="'1.This watch is _______ by hand, not by machine, so it is very expensive.'|textformat">
+            </p>
+            <ion-list radio-group [(ngModel)]="relationship" no-lines>
+                <ion-item>
+                    <ion-label [innerHtml]="'A.This watch is _______ by hand, not by machine, so it is very expensive.'"></ion-label>
+                    <ion-radio value="A"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>B.coined</ion-label>
+                    <ion-radio value="B"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>C.bored</ion-label>
+                    <ion-radio value="C"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>D.manufactured</ion-label>
+                    <ion-radio value="D"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+        <ion-slide padding>
+            <p class="content" [innerHtml]="blog|textformat">
+            </p>
+        </ion-slide>
+    </ion-slides>
+    <ion-fab bottom right>
+        <button ion-fab mini>
+            <ion-icon name="book"></ion-icon>
+        </button>
+        <ion-fab-list side="top">
+            <button ion-fab>1</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+            <button ion-fab>A</button>
+            <button ion-fab>B</button>
+            <button ion-fab>C</button>
+        </ion-fab-list>
+        <ion-fab-list side="left">
+            <button ion-fab>
+                一
+            </button>
+            <button ion-fab class="active">
+                二
+            </button>
+            <button ion-fab>
+                三
+            </button>
+            <button ion-fab>
+                四
+            </button>
+        </ion-fab-list>
+    </ion-fab>
+
+</ion-content>

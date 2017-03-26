@@ -8,7 +8,8 @@
     "build": "ionic-app-scripts build --prod --aot",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
-    "ionic:start": "ionic start"
+    "platform:ios": "cordova platform add ios",
+    "build:ios": "cordova build ios"
   },
   "dependencies": {
     "@angular/common": "2.4.8",

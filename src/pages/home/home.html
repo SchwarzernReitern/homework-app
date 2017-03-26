@@ -1,36 +1,48 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>
-            Page Title
-        </ion-title>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
 
+        <ion-select [(ngModel)]="grade" okText="确定" cancelText="取消" [selectOptions]="gradeSelectTitle">
+            <ion-option value="六年级" selected="true">六年级</ion-option>
+            <ion-option value="七年级">七年级</ion-option>
+            <ion-option value="八年级">八年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+            <ion-option value="九年级">九年级</ion-option>
+        </ion-select>
         <ion-buttons end>
             <button ion-button icon-only (click)="gotoSearch()">
                 <ion-icon name="search"></ion-icon>
             </button>
         </ion-buttons>
     </ion-navbar>
-
 </ion-header>
-
 <ion-content class="card-background-page">
-    <ion-card>
-        <img src="/assets/demo/card-saopaolo.png"/>
+    <ion-card (click)="toTestPaperPage()">
+        <img src="assets/demo/card-saopaolo.png"/>
         <div class="card-title">São Paulo</div>
         <div class="card-subtitle">41 Listings</div>
     </ion-card>
     <ion-card>
-        <img src="/assets/demo/card-amsterdam.png"/>
+        <img src="assets/demo/card-amsterdam.png"/>
         <div class="card-title">Amsterdam</div>
         <div class="card-subtitle">64 Listings</div>
     </ion-card>
     <ion-card>
-        <img src="/assets/demo/card-sf.png"/>
+        <img src="assets/demo/card-sf.png"/>
         <div class="card-title">San Francisco</div>
         <div class="card-subtitle">72 Listings</div>
     </ion-card>
     <ion-card>
-        <img src="/assets/demo/card-madison.png"/>
+        <img src="assets/demo/card-madison.png"/>
         <div class="card-title">Madison</div>
         <div class="card-subtitle">28 Listings</div>
     </ion-card>

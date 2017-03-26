@@ -4,24 +4,25 @@
 /**
  * Created by Tristan on 17/3/19.
  */
-import {Component} from "@angular/core";
-import {NavController, NavParams} from "ionic-angular";
+import {Component, ViewChild} from "@angular/core";
+import {Content, NavController, NavParams} from "ionic-angular";
 import {RegisterPage} from "../register/register";
 import {FindpassPage} from "../findpass/findpass";
+import {UserprofileProvider} from "../../../../providers/userprofile";
 
 @Component({
     selector: 'page-login',
-    templateUrl: 'login.html'
+    templateUrl: 'login.html',
+    providers: [UserprofileProvider]
 })
 export class LoginModal {
+    @ViewChild(Content)
+    content: Content;
 
-
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, public userProfileProvider: UserprofileProvider) {
     }
 
     ionViewCanEnter(): boolean {
-        // here we can either return true or false
-        // depending on if we want to leave this view
         return true;
     }
 
@@ -36,5 +37,9 @@ export class LoginModal {
 
     toFindPassPage() {
         this.navCtrl.push(FindpassPage);
+    }
+
+    doLogin(){
+        this.userProfileProvider.doLogoin();
     }
 }

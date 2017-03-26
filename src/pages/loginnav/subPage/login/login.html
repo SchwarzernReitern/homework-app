@@ -2,34 +2,36 @@
     <ion-navbar>
         <ion-buttons start>
             <button ion-button color="primary" (click)="close()">
-                <ion-icon name="md-arrow-round-back" start></ion-icon>
+                <ion-icon name="ios-arrow-back" style="font-size: 3.4rem;" class="white-shadow" start></ion-icon>
             </button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
-<ion-grid padding style="background-color: white;height: 100%;padding-top: 100px">
-    <ion-row style="">
+
+<ion-grid class="login-container">
+    <img src="assets/demo/login/background.jpg" class="background"/>
+    <ion-row class="login-content" padding>
         <ion-col col-12 style="text-align:center;">
-            <img src="/assets/demo/logo.png" style="max-width:80%;"/>
+            <img src="assets/demo/logo.png" style="max-width:80%;"/>
         </ion-col>
         <ion-col col-12>
             <ion-list no-lines>
-                <ion-item>
+                <ion-item class="white-shadow">
                     <ion-label>
                         <ion-icon name="ios-person-outline"></ion-icon>
                     </ion-label>
                     <ion-input type="text" placeholder="请输入手机号码" clearInput></ion-input>
                 </ion-item>
-                <ion-item>
+                <ion-item class="white-shadow">
                     <ion-label>
                         <ion-icon name="ios-lock-outline"></ion-icon>
                     </ion-label>
                     <ion-input type="password" placeholder="请输入密码" clearInput></ion-input>
                 </ion-item>
-                <button ion-button color="primary" full round>登录</button>
-                <ion-item>
-                    <a style="float:left" (click)="toFindPassPage()">忘记密码</a>
-                    <a style="float:right" (click)="toRegisterPage()">注册</a>
+                <button ion-button color="primary" (click)="doLogin()" full round>登录</button>
+                <ion-item class="fd-rg">
+                    <a class="white-shadow" style="float:left" (click)="toFindPassPage()">忘记密码</a>
+                    <a class="white-shadow" style="float:right" (click)="toRegisterPage()">注册</a>
                 </ion-item>
             </ion-list>
         </ion-col>

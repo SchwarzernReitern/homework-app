@@ -14,6 +14,10 @@ import {ChatPage} from "../pages/chat/chat";
 import {WelcomePage} from "../pages/welcome/welcome";
 import {IonicStorageModule} from '@ionic/storage';
 import {LoginnavPage} from "../pages/loginnav/loginnav";
+import {MenuPage} from "../pages/menu/menu";
+import {SettingsPage} from "../pages/settings/settings";
+import {TestpaperPage} from "../pages/testpaper/testpaper";
+import {Textformat} from "../pipes/textformat";
 
 @NgModule({
     declarations: [
@@ -29,11 +33,18 @@ import {LoginnavPage} from "../pages/loginnav/loginnav";
         FindpassPage,
         ChatPage,
         WelcomePage,
-        LoginnavPage
+        LoginnavPage,
+        MenuPage,
+        SettingsPage,
+        TestpaperPage,
+        Textformat
     ],
     imports: [
         IonicModule.forRoot(MyApp, {mode: 'ios'}),
-        IonicStorageModule.forRoot()
+        IonicStorageModule.forRoot({
+            name: '__mydb',
+            driverOrder: ['indexeddb', 'sqlite', 'websql']
+        })
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -48,7 +59,10 @@ import {LoginnavPage} from "../pages/loginnav/loginnav";
         RegisterPage,
         FindpassPage,
         ChatPage, WelcomePage,
-        LoginnavPage
+        LoginnavPage,
+        MenuPage,
+        SettingsPage,
+        TestpaperPage
     ],
     providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })
